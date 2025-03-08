@@ -1,0 +1,42 @@
+{% extends "../root.html" %}
+
+{% block content %}
+  
+  {% include 'snippets/_search_input.html' %}
+  {% include 'snippets/_hero.html' %}
+  
+  <div class="px-6 pt-12">
+    <div class="mb-5">
+      <h2 class="text-3xl mb-2 text-blue-600">MY SERVICES</h2>
+      <p class="block max-w-2xl">
+        Empowering Your Life with Traditional Healing and Natural Remedies for Health, Love, and Prosperity
+      </p>
+    </div>
+
+      {% for service in services %}
+        {% include 'snippets/_blog_card.html' with service=service %}
+      {% endfor %}
+
+      <div class="flex items-center justify-center">
+        <a href="/services" class="py-4 rounded-full text-neutral-100 font-jost w-fit flex items-center justify-center px-6 bg-blue-600">
+          More Services
+        </a>
+      </div>
+
+  </div>
+
+  <div class="pt-12">
+      {% include 'snippets/_testimonial.html' with testimonials=testimonials %}
+  </div>
+  
+  <div class="px-5">
+    {% include 'snippets/_about_me.html' %}
+  </div>
+
+  <div class="pt-12 px-7">
+  
+    {% include 'snippets/_contact.html' %}
+  </div>
+
+
+{% endblock %}

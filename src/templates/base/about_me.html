@@ -1,0 +1,97 @@
+{% extends "../root.html" %}
+{% load static %}
+{% block content %}
+  
+{% include 'snippets/_search_input.html' %}
+
+<section class="px-0">
+
+
+  <div class="-mt-16">
+    {% include 'snippets/_about_me.html' %}
+
+    <div class="flex flex-col md:flex-row items-center mt-10 px-8 space-y-5 md:space-y-0">
+      <div class="basis-1/2">
+        <img src="{% static 'images/img-4.jpg' %}" alt="image" class="w-full h-full object-cover rounded-lg" />
+      </div>
+      <div class="px-4 flex justify-center basis-1/2 anim-el-hidden">
+        <div>
+          <h2 class="title">
+            Implementing Rituals
+          </h2>
+          <p class="mb-4">
+            The doctor calls upon ancestral spirits, seeking their blessing to restore balance and well-being.
+          </p>
+
+          <p>
+            He uses traditional methods and natural herbs to help people with various issues in their lives.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-center mt-10 px-8 space-y-5 md:space-y-0">
+      
+      <div class="px-4 flex justify-center basis-1/2 anim-el-hidden">
+        <div>
+          <h2 class="title">
+            Spiritual Ground
+          </h2>
+          <p class="mb-4">
+           This is the house my grandfather built. It is a place of healing and spiritual growth.
+          </p>
+
+          <p>
+           We practice traditional healing methods and rituals to help people with various issues in their lives.
+          </p>
+        </div>
+      </div>
+      <div class="basis-1/2">
+        <img src="{% static 'images/img-7.jpg' %}" alt="image" class="w-full h-full object-cover rounded-lg" />
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-center mt-10 px-8 space-y-5 md:space-y-0">
+      <div class="basis-1/2">
+        <img src="{% static 'images/img-8.jpg' %}" alt="image" class="w-full h-full object-cover rounded-lg" />
+      </div>
+      <div class="px-4 flex justify-center basis-1/2 anim-el-hidden">
+        <div>
+          <h2 class="title">
+            Lake Grands
+          </h2>
+          <p class="mb-4">
+            A place blessed by the spirits of the lake. Here, the Ancestors of the water guide those who seek healing and wisdom.
+          </p>
+
+          <p>
+            We honor the ancient ways, using sacred rituals and the power of the water to cleanse, restore, and bring balance to those who come in need.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="px-10 pt-10 anim-el-hidden">
+      <ul class="list-inside list-disc flex flex-col gap-2">
+        <li>Diagnosis Through Observation & Spiritual Guidance – They assess the patient’s condition through physical signs, dreams, or ancestral messages.</li>
+        <li>
+          Herbal Medicine – They prepare and administer plant-based remedies for healing.
+        </li>
+        <li>
+          Rituals & Prayers – They perform ceremonies, chants, and offerings to spirits for protection and healing.
+        </li>
+
+        <li>
+          Community & Emotional Support – They counsel clients, offering wisdom and guidance for life challenges.
+        </li>
+      </ul>
+    </div>
+
+    <div class="max-w-[50%] mx-auto px-8 mt-10 w-full flex items-center justify-center">
+      <a href="/contact-me" class="flex items-center justify-center h-16 w-fit bg-blue-600 text-white px-8 py-3 rounded-full font-jost">
+        <p>Contact Me</p>
+      </a>
+    </div>
+  </div>
+
+{% endblock %}

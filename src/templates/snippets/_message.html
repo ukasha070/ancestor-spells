@@ -1,0 +1,25 @@
+{% if messages %}
+<div
+  id="message-container"
+  class="messages z-[200] fixed top-0 right-0 flex items-center p-4 bg-green-500"
+>
+  <button
+    type="button"
+    onclick="closeMessageBox()"
+    class="h-8 w-8 flex items-center justify-center rounded-md border"
+  >
+    <p>x</p>
+  </button>
+  {% for message in messages %}
+    <div class=" text-neutral-100 px-3 py-2 font-semibold">{{ message }}</div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<script>
+  function closeMessageBox() {
+    const messageContainer = document.getElementById("message-container");
+
+    messageContainer.style.display = "none";
+  }
+</script>

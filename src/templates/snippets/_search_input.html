@@ -1,0 +1,17 @@
+<div class="w-full h-fit px-4 py-5">
+  <form action="{% url 'search_services' %}" method="get" class="w-full h-16 flex items-center justify-between bg-white border-neutral-100 border rounded-2xl ">
+    <input type="text" name="q" value="{{ query }}" id="search" class="w-full h-full bg-transparent outline-none pl-4" placeholder="Search for a product" />
+    <button type="submit" class="h-10 aspect-square">
+      <svg width="24" height="24" fill="none" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="m16.672 16.641 4.3275 4.3588m-2-10c0 4.4183-3.5817 8-8 8-4.4183 0-8-3.5817-8-8 0-4.4183 3.5817-8 8-8 4.4183 0 8 3.5817 8 8z" class="stroke-2 stroke-current"/>
+       </svg>
+       
+    </button>
+  </form>
+
+  {% if query %}
+    <div class="text-lg">
+      <p class="block ml-3 py-5">Results for: {{ query }}</p>
+    </div>
+  {% endif %}
+</div>

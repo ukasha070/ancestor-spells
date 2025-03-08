@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %} Ancestor Spells {% endblock %}
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="bg-neutral-100">
+        <div class=" max-w-6xl mx-auto font-merriweather">
+            {% block header %}
+                {% include '_header.html' %}
+            {% endblock %}
+            
+            {% block content %}{% endblock %}
+            
+            {% block footer %}
+                {% include '_footer.html' %}
+            {% endblock %}
+        </div>
+
+        {% include 'snippets/_message.html' %}
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const animElement = entry.target;
+                if (entry.isIntersecting) {
+                    animElement.classList.add('anim-el-show');
+                } else {
+                    animElement.classList.remove('anim-el-show');
+                }
+            });
+        });
+
+        const animElements = document.querySelectorAll('.anim-el-hidden');
+        animElements.forEach(animElement => {
+            observer.observe(animElement);
+        });
+    </script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

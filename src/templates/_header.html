@@ -1,0 +1,150 @@
+<div class="h-10 md:h-24"></div>
+<header
+  class="h-20 bg-neutral-100 flex items-center justify-between px-6 text-base font-jost  sticky top-0 z-[100]"
+>
+  <nav id="nav-wrapper" class="h-fit hidden overflow-hidden absolute md:relative md:flex w-full bg-neutral-100 top-full left-0 p-4 py-6 md:py-0 md:p-0 md:top-auto md:h-full">
+    <ul class="flex items-center flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-2">
+      <li class="w-full h-10 hover:opacity-75 hover:bg-neutral-100 rounded-2xl md:w-full flex items-center justify-center md:h-full">
+        <a href="/" class="flex items-center justify-start h-full w-full px-4 md:justify-center whitespace-nowrap {% if request.resolver_match.url_name == 'home' %} text-blue-600 {% else %} {% endif %}">HOME</a>
+      </li>
+      
+      <li class="w-full h-10 hover:opacity-75 hover:bg-neutral-100 rounded-2xl md:w-full flex items-center justify-center md:h-full">
+        <a href="/services" class="flex items-center justify-start h-full w-full px-4 md:justify-center whitespace-nowrap {% if request.resolver_match.url_name == 'service_list' %} text-blue-600 {% else %} {% endif %}">SERVICES</a>
+      </li>
+
+      <li class="w-full h-10 hover:opacity-75 hover:bg-neutral-100 rounded-2xl md:w-full flex items-center justify-center md:h-full">
+        <a href="/about-me" class="flex items-center justify-start h-full w-full px-4 md:justify-center whitespace-nowrap {% if request.resolver_match.url_name == 'about_me' %} text-blue-600 {% else %} {% endif %}">ABOUT ME</a>
+      </li>
+
+      <li class="w-full h-10 hover:opacity-75 hover:bg-neutral-100 rounded-2xl md:w-full flex items-center justify-center md:h-full">
+        <a href="/contact-me" class="flex items-center justify-start h-full w-full px-4 md:justify-center whitespace-nowrap {% if request.resolver_match.url_name == 'contact_me' %} text-blue-600 {% else %} {% endif %}">CONTACT US</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="block md:hidden">
+    <div
+      onclick="openSidebar()"
+      class="flex flex-col w-12 rounded-2xl aspect-square justify-between cursor-pointer border border-neutral-100 p-3 hover:opacity-50 hover:bg-neutral-100 duration-300"
+    >
+      <span class="h-1 w-full block bg-neutral-500 rounded-full"></span>
+      <span class="h-1 w-full block bg-neutral-500 rounded-full"></span>
+      <span class="h-1 w-full block bg-neutral-500 rounded-full"></span>
+    </div>
+  </div>
+
+  <div class="flex items-center justify-center h-4/6 space-x-1">
+    <a
+      href="tel:+256774606345"
+      class="flex items-center justify-center h-full w-full aspect-square border border-neutral-100 rounded-2xl hover:opacity-50 hover:bg-neutral-100 duration-300"
+    >
+      <p>
+        <svg
+          width="24"
+          height="24"
+          version="1.1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g transform="matrix(1.2592 0 0 1.2592 -4.368 -1.8516)" fill="none">
+            <path
+              d="m6.0074 3.4069c1.6801-1.6801 4.5152-1.5524 5.685 0.54377l0.649 1.1629c0.7639 1.3688 0.4384 3.0959-0.6799 4.2279-0.0149 0.02041-0.0939 0.13534-0.1037 0.33615-0.0125 0.25633 0.0785 0.84912 0.9969 1.7675 0.9181 0.9181 1.5108 1.0094 1.7673 0.9969 0.201-0.0098 0.316-0.0887 0.3364-0.1037 1.132-1.1182 2.8591-1.4438 4.2279-0.6799l1.1629 0.6491c2.0961 1.1698 2.2238 4.0049 0.5438 5.685-0.8987 0.8986-2.0936 1.6971-3.4978 1.7504-2.0809 0.0789-5.5362-0.4585-8.958-3.8803-3.4218-3.4218-3.9592-6.877-3.8803-8.958 0.05324-1.4042 0.85173-2.5991 1.7504-3.4978zm4.3752 1.2748c-0.59907-1.0734-2.2088-1.3199-3.3146-0.21411-0.77535 0.77535-1.2794 1.6312-1.3121 2.4939-0.06579 1.7353 0.36265 4.7611 3.442 7.8404 3.0794 3.0794 6.1051 3.5078 7.8405 3.442 0.8628-0.0327 1.7186-0.5367 2.4939-1.3121 1.1058-1.1058 0.8592-2.7155-0.2141-3.3145l-1.1629-0.649c-0.7234-0.4038-1.7396-0.266-2.4529 0.4473l-2e-4 2e-4c-0.0701 0.07-0.5159 0.486-1.3073 0.5245-0.8103 0.0394-1.791-0.3247-2.9008-1.4345-1.1102-1.1102-1.4742-2.0912-1.4345-2.9016 0.0388-0.79152 0.455-1.2371 0.5246-1.3068l1e-4 -3e-5c0.7133-0.71332 0.851-1.7295 0.4473-2.4529z"
+              clipRule="evenodd"
+              class="fill-current"
+              fillRule="evenodd"
+            />
+          </g>
+        </svg>
+      </p>
+    </a>
+
+    <a
+      href="mailto:jajjamumalansonga2@gmail.com"
+      target="_blank"
+      class="flex items-center justify-center h-full w-full aspect-square border border-neutral-100 rounded-2xl hover:opacity-50 hover:bg-neutral-100 duration-300"
+    >
+      <p>
+        <svg
+          width="24"
+          height="24"
+          version="1.1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g transform="matrix(.99599 0 0 .99599 .048132 .048132)" fill="none">
+            <g stroke-linecap="round" class="stroke-current" stroke-width="1.5">
+              <path
+                id="vector"
+                d="m17 20.5h-10c-3 0-5-1.5-5-5v-7c0-3.5 2-5 5-5h10c3 0 5 1.5 5 5v7c0 3.5-2 5-5 5z"
+                stroke-linejoin="round"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="m18.77 7.7688-5.547 4.2863c-0.7203 0.5565-1.7255 0.5565-2.4458 0l-5.547-4.2863"
+              />
+            </g>
+          </g>
+        </svg>
+      </p>
+    </a>
+    
+    {% if user.is_authenticated %}
+      <a
+        href="/admin"
+        class="flex items-center justify-center h-full w-full aspect-square border border-green-100 rounded-2xl hover:opacity-50 hover:bg-green-100 duration-300"
+      >
+        <p>
+          <svg
+            width="24"
+            height="24"
+            version="1.1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m5.1109 5.5566v-2.0667c0-0.22369-0.18155-0.40524-0.40524-0.40524-0.22369 0-0.40524 0.18155-0.40524 0.40524v2.0667c-1.373 0.19857-2.4314 1.3681-2.4314 2.7962s1.0585 2.5976 2.4314 2.7962v9.3615c0 0.2237 0.18155 0.40524 0.40524 0.40524 0.22369 0 0.40524-0.18155 0.40524-0.40524v-9.3615c1.373-0.19857 2.4314-1.3681 2.4314-2.7962s-1.0585-2.5976-2.4314-2.7962zm-0.40524 4.8224c-1.1169 0-2.0262-0.90936-2.0262-2.0262 0-1.1177 0.90936-2.0262 2.0262-2.0262 1.1169 0 2.0262 0.90855 2.0262 2.0262 0 1.1169-0.90936 2.0262-2.0262 2.0262zm7.6996 2.472v-9.3615c0-0.22369-0.18155-0.40524-0.40524-0.40524s-0.40524 0.18155-0.40524 0.40524v9.3615c-1.373 0.19857-2.4314 1.3681-2.4314 2.7962 0 1.4281 1.0585 2.5976 2.4314 2.7962v2.0667c0 0.2237 0.18155 0.40524 0.40524 0.40524s0.40524-0.18155 0.40524-0.40524v-2.0667c1.373-0.19857 2.4314-1.3681 2.4314-2.7962 0-1.4281-1.0585-2.5976-2.4314-2.7962zm-0.40524 4.8224c-1.1168 0-2.0262-0.90936-2.0262-2.0262 0-1.1177 0.90936-2.0262 2.0262-2.0262s2.0262 0.90855 2.0262 2.0262c0 1.1168-0.90936 2.0262-2.0262 2.0262zm10.131-6.8891c0-1.4281-1.0585-2.5976-2.4314-2.7962v-4.4982c0-0.22369-0.18155-0.40524-0.40524-0.40524-0.2237 0-0.40524 0.18155-0.40524 0.40524v4.4982c-1.373 0.19857-2.4314 1.3681-2.4314 2.7962 0 1.4281 1.0585 2.5976 2.4314 2.7962v6.9296c0 0.2237 0.18155 0.40524 0.40524 0.40524 0.22369 0 0.40524-0.18155 0.40524-0.40524v-6.9296c1.373-0.19857 2.4314-1.3681 2.4314-2.7962zm-2.8367 2.0262c-1.1169 0-2.0262-0.90936-2.0262-2.0262 0-1.1177 0.90936-2.0262 2.0262-2.0262 1.1168 0 2.0262 0.90855 2.0262 2.0262 0 1.1168-0.90936 2.0262-2.0262 2.0262z"
+              fill="url(#linearGradient875)"
+              class="stroke-green-500 stroke-1"
+            />
+          </svg>
+        </p>
+      </a>
+      {% else %}
+      <a
+      href="/login"
+      class="flex items-center justify-center h-full w-full aspect-square border border-neutral-100 rounded-2xl hover:opacity-50 hover:bg-neutral-100 duration-300"
+    >
+      <p>
+        <svg
+          width="24"
+          height="24"
+          version="1.1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m5.1109 5.5566v-2.0667c0-0.22369-0.18155-0.40524-0.40524-0.40524-0.22369 0-0.40524 0.18155-0.40524 0.40524v2.0667c-1.373 0.19857-2.4314 1.3681-2.4314 2.7962s1.0585 2.5976 2.4314 2.7962v9.3615c0 0.2237 0.18155 0.40524 0.40524 0.40524 0.22369 0 0.40524-0.18155 0.40524-0.40524v-9.3615c1.373-0.19857 2.4314-1.3681 2.4314-2.7962s-1.0585-2.5976-2.4314-2.7962zm-0.40524 4.8224c-1.1169 0-2.0262-0.90936-2.0262-2.0262 0-1.1177 0.90936-2.0262 2.0262-2.0262 1.1169 0 2.0262 0.90855 2.0262 2.0262 0 1.1169-0.90936 2.0262-2.0262 2.0262zm7.6996 2.472v-9.3615c0-0.22369-0.18155-0.40524-0.40524-0.40524s-0.40524 0.18155-0.40524 0.40524v9.3615c-1.373 0.19857-2.4314 1.3681-2.4314 2.7962 0 1.4281 1.0585 2.5976 2.4314 2.7962v2.0667c0 0.2237 0.18155 0.40524 0.40524 0.40524s0.40524-0.18155 0.40524-0.40524v-2.0667c1.373-0.19857 2.4314-1.3681 2.4314-2.7962 0-1.4281-1.0585-2.5976-2.4314-2.7962zm-0.40524 4.8224c-1.1168 0-2.0262-0.90936-2.0262-2.0262 0-1.1177 0.90936-2.0262 2.0262-2.0262s2.0262 0.90855 2.0262 2.0262c0 1.1168-0.90936 2.0262-2.0262 2.0262zm10.131-6.8891c0-1.4281-1.0585-2.5976-2.4314-2.7962v-4.4982c0-0.22369-0.18155-0.40524-0.40524-0.40524-0.2237 0-0.40524 0.18155-0.40524 0.40524v4.4982c-1.373 0.19857-2.4314 1.3681-2.4314 2.7962 0 1.4281 1.0585 2.5976 2.4314 2.7962v6.9296c0 0.2237 0.18155 0.40524 0.40524 0.40524 0.22369 0 0.40524-0.18155 0.40524-0.40524v-6.9296c1.373-0.19857 2.4314-1.3681 2.4314-2.7962zm-2.8367 2.0262c-1.1169 0-2.0262-0.90936-2.0262-2.0262 0-1.1177 0.90936-2.0262 2.0262-2.0262 1.1168 0 2.0262 0.90855 2.0262 2.0262 0 1.1168-0.90936 2.0262-2.0262 2.0262z"
+            fill="url(#linearGradient875)"
+            class="stroke-current stroke-1"
+          />
+        </svg>
+      </p>
+    </a>
+    {% endif %}
+  </div>
+</header>
+
+<script>
+  function openSidebar() {
+    if(window.innerWidth < 768) {
+      const sidebarCont = document.querySelector('#nav-wrapper');
+
+      if(sidebarCont.classList.contains("hidden")) {
+        sidebarCont.classList.remove("hidden");
+      }
+      else {
+        sidebarCont.classList.add("hidden");
+      }
+    }
+  }
+</script>

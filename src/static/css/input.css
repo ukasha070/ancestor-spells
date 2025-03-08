@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ./tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch */
+
+@layer base {
+
+  h2, h3, h1, h4 {
+    @apply font-jost
+  }
+  .title {
+    @apply my-6 text-2xl text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-violet-600 sm:text-3xl md:text-4xl
+  }
+
+  #mdx-wrapper {
+    @apply  text-gray-900; /* container styles */
+  }
+
+  #mdx-wrapper h1,
+  #mdx-wrapper h2,
+  #mdx-wrapper h3 {
+    @apply text-2xl font-bold text-gray-800 mt-6 mb-3; /* header styles */
+  }
+
+  #mdx-wrapper p {
+    @apply mb-4 leading-relaxed text-lg text-gray-700; /* paragraph styles */
+  }
+
+  #mdx-wrapper ul,
+  #mdx-wrapper ol {
+    @apply list-inside list-disc pl-6; /* list styles */
+  }
+
+  #mdx-wrapper a {
+    @apply text-blue-500 hover:text-blue-700 transition-colors; /* link styles */
+  }
+
+  #mdx-wrapper code {
+    @apply bg-gray-200 p-1 rounded text-sm; /* inline code styles */
+  }
+
+  #mdx-wrapper pre {
+    @apply bg-gray-800 text-white p-4 rounded-lg overflow-x-auto; /* block code styles */
+  }
+
+  #mdx-wrapper blockquote {
+    @apply border-l-4 pl-4 italic text-gray-600 border-gray-400 my-4; /* blockquote styles */
+  }
+
+  #mdx-wrapper img {
+    @apply max-w-full rounded-lg shadow-md my-4; /* image styles */
+  }
+
+  #mdx-wrapper hr {
+    @apply border-t-2 border-gray-300 my-6; /* horizontal rule styles */
+  }
+
+  .message-alert-box {
+    @apply bg-neutral-100 px-4 py-2;
+  }
+  .alert-success {
+    @apply bg-green-500 px-4 py-2;
+
+  }
+  .alert-error {
+    @apply bg-red-500 px-4 py-2;
+  }
+  .alert-info {
+    @apply bg-green-600 px-4 py-2;
+  }
+}
+
+.anim-el-hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(50%);
+    transition: all 0.9s;
+}
+.anim-el-show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .anim-el-hidden {
+        transition: none;
+    }
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    content: '' !important;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    content: '' !important;
+}
+
+.swiper-button-next svg,
+.swiper-button-prev svg {
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: relative !important;
+    margin-top: 32px;
+}
+
+.swiper-slide.swiper-slide-active {
+    --tw-border-opacity: 1 !important;
+    border-color: rgb(79 70 229 / var(--tw-border-opacity)) !important;
+}
+
+.swiper-slide.swiper-slide-active>.swiper-slide-active\:text-indigo-600 {
+    --tw-text-opacity: 1;
+    color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+
+.swiper-slide.swiper-slide-active>.flex .grid .swiper-slide-active\:text-indigo-600 {
+    --tw-text-opacity: 1;
+    color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+

@@ -1,0 +1,19 @@
+<a href="{% url 'service_detail' service.id %}" class="flex flex-col sm:flex-row gap-6 pb-6 border-b-2 border-gray-100 anim-el-hidden">
+  <!-- Blog Date -->
+
+  <div class="min-w-44 h-36">
+    <img src="{{ service.thumbnail }}" alt="{{ service.title }}" class="object-cover w-full h-full rounded-lg" />
+  </div>
+  <!--  -->
+  <div class="flex flex-col justify-between anim-el-hidden">
+    <!-- Author & Category -->
+    <div class="flex md:gap-4 gap-2 text-sm text-gray-700 font-semibold">
+      <span class="flex gap-1 items-center"><ion-icon name="person-outline"></ion-icon>admin</span>
+      <span class="flex gap-1 items-center"><ion-icon class="-rotate-90" name="pricetags-outline"></ion-icon>Jaaja</span>
+    </div>
+    <!-- Blog Titile -->
+    <h3 class="text-2xl font-semibold text-teal-900 capitalize chelsea-market-regular">{{ service.title }}</h3>
+    <!-- Blog Description -->
+    <p class="text-md text-gray-500 line-clamp-3">{{ service.description }}</p>
+  </div>
+</a>
